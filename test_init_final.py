@@ -884,7 +884,7 @@ async def on_message(msg):
 
 		if message.content.startswith('!분배'):
 			separate_money = []
-			separate_money = message.content[4:].split(" ")
+			separate_money = message.content[3:].split(" ")
 			num_sep = int(separate_money[0])
 			cal_tax1 = math.ceil(float(separate_money[1])*0.05)
 			real_money = int(int(separate_money[1]) - cal_tax1)
