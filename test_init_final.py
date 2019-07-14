@@ -1263,7 +1263,7 @@ async def on_message(msg):
 					description= ' ')
 			embed.add_field(name='1시간', value='기감', inline=False)
 			embed.add_field(name='2시간', value='서드,북드,카파,빨샤(멍),녹샤(멍),이프(멍),웜(멍),개미(멍)', inline=False)
-			embed.add_field(name='3시간', value='중드,동드,거드(멍),마요(멍),산두,자크,스피,가스트(멍),대흑,베리스/대장로(멍),케레(멍)', inline=False)
+			embed.add_field(name='3시간', value='중드,동드,산적,자크,스피,거드(멍),마요(멍),가스트(멍),대흑,베리스/대장로(멍),케레(멍)', inline=False)
 			embed.add_field(name='4시간', value='아르,도펠(멍)', inline=False)
 			embed.add_field(name='5시간', value='에자(멍)', inline=False)
 			embed.add_field(name='6시간', value='감데', inline=False)
