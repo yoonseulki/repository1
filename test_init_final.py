@@ -1257,20 +1257,22 @@ async def on_message(msg):
 			now3 = datetime.datetime.now() + datetime.timedelta(hours = int(basicSetting[0]))
 			await client.get_channel(channel).send(now3.strftime('%Y-%m-%d') + '   ' + now3.strftime('%H:%M:%S'), tts=False)
 
-		if message.content.startswith('/리젠'):
+		if message.content.startswith('/리젠') or message.content.startswith('!리젠'):
 			embed = discord.Embed(
 					title='----- 리스폰 보스 -----',
 					description= ' ')
 			embed.add_field(name='1시간', value='기감', inline=False)
-			embed.add_field(name='2시간', value='서드,북드,카파,질풍,광풍,이프,자웜,개미', inline=False)
-			embed.add_field(name='3시간', value='중드,동드,거드,마요,산적,자크,스피,가스트,대흑장로', inline=False)
-			embed.add_field(name='4시간', value='아르,도펠', inline=False)
-			embed.add_field(name='5시간', value='에자', inline=False)
+			embed.add_field(name='2시간', value='서드,북드,카파,질풍(멍),광풍(멍),이프(멍),자웜(멍),개미(멍)', inline=False)
+			embed.add_field(name='3시간', value='중드,동드,거드(멍),마요(멍),산적,자크,스피,가스트(멍),대흑장로,베리스/대장로(멍),케레(멍)', inline=False)
+			embed.add_field(name='4시간', value='아르,도펠(멍)', inline=False)
+			embed.add_field(name='5시간', value='에자(멍)', inline=False)
 			embed.add_field(name='6시간', value='감시자 데몬', inline=False)
-			embed.add_field(name='6시간 53', value='피닉스', inline=False)
-			embed.add_field(name='7시간', value='데스나이트', inline=False)
-			embed.add_field(name='8시간', value='리칸트', inline=False)
-			embed.add_field(name='10시간', value='커츠', inline=False)
+			embed.add_field(name='6시간 53분', value='피닉스(멍)', inline=False)
+			embed.add_field(name='7시간', value='데스나이트(멍)', inline=False)
+			embed.add_field(name='8시간', value='리칸트(멍)', inline=False)
+			embed.add_field(name='10시간', value='커츠(멍)', inline=False)
+			embed.add_field(name='14:00~14:30, 20:00~20:30', value='바포', inline=False)
+			embed.add_field(name='매 홀수 정시', value='네크', inline=False)
 			await client.get_channel(channel).send(embed=embed, tts=False)
 
 client.run(access_token)
