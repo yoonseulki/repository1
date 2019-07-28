@@ -1212,12 +1212,16 @@ async def on_message(msg):
 
 
 			temp_bossTime1 = []
+			temp_bossTime2 = []
 			for i in range(bossNum):
 				if bossTimeString[i] == '99:99:99' :
 					print (bossTimeString[i] + bossData[i][0])
 #-----------------------
 					if bossData[i][0] in neutrality_boss :
 						temp_bossTime1.append(bossData[i][0])
+					
+					else:
+						temp_bossTime2.append(bossData[i][0])
 #-----------------------
 #					temp_bossTime1.append(bossData[i][0])
 #-----------------------
@@ -1228,6 +1232,12 @@ async def on_message(msg):
 
 			else:
 				temp_bossTimeSTR1 = '``` ```'
+
+			if len(temp_bossTime2) != 0:
+				temp_bossTimeSTR2 = ','.join(map(str, temp_bossTime2))
+				temp_bossTimeSTR2 = '```' + temp_bossTimeSTR2 + '```'
+
+
 				
 			information = ''
 			for timestring in sorted(datelist):
@@ -1271,6 +1281,14 @@ async def on_message(msg):
 			#		value = fixed_information,
 			#		inline = False
 			#		)
+			if len(temp_bossTime2) != 0:
+				embed.add_field(
+						name="----- 미예약 통제보스 -----",
+						value= temp_bossTimeSTR2,
+						inline = False
+						)
+
+
 			await client.get_channel(channel).send(embed=embed, tts=False)
 			#await client.get_channel(channel).send("```\n" + fixed_information + "```")
 			#await client.get_channel(channel).send("```\n" + information  + "```")
