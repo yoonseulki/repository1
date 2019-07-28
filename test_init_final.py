@@ -1214,16 +1214,16 @@ async def on_message(msg):
 					temp_bossTime1.append(bossData[i][0])
 
 #-----------------------
-			temp_bossTime2 = []
-			if len(temp_bossTime1) != 0:
-				for i in range(temp_bossTime1):
-					if temp_bossTime1[i] in neutrality_boss :
-						temp_bossTime2.append(temp_bossTime1[i])
-				temp_bossTimeSTR1 = ','.join(map(str, temp_bossTime2))
-				temp_bossTimeSTR1 = '```' + temp_bossTimeSTR1 + '```'
+#			temp_bossTime2 = []
+#			if len(temp_bossTime1) != 0:
+#				for i in range(temp_bossTime1):
+#					if temp_bossTime1[i] in neutrality_boss :
+#						temp_bossTime2.append(temp_bossTime1[i])
+#				temp_bossTimeSTR1 = ','.join(map(str, temp_bossTime2))
+#				temp_bossTimeSTR1 = '```' + temp_bossTimeSTR1 + '```'
 #-----------------------
-				#temp_bossTimeSTR1 = ','.join(map(str, temp_bossTime1))
-				#temp_bossTimeSTR1 = '```' + temp_bossTimeSTR1 + '```'
+				temp_bossTimeSTR1 = ','.join(map(str, temp_bossTime1))
+				temp_bossTimeSTR1 = '```' + temp_bossTimeSTR1 + '```'
 #-----------------------
 
 			else:
