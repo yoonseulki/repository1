@@ -1282,7 +1282,7 @@ async def on_message(msg):
 			#		)
 			if len(temp_bossTime2) != 0:
 				embed.add_field(
-						name="----- 미예약 통제보스 -----",
+						name="----- 미예약 라인보스 -----",
 						value= temp_bossTimeSTR2,
 						inline = False
 						)
