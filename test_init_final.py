@@ -1215,7 +1215,6 @@ async def on_message(msg):
 			temp_bossTime2 = []
 			for i in range(bossNum):
 				if bossTimeString[i] == '99:99:99' :
-					print (bossTimeString[i] + bossData[i][0])
 #-----------------------
 					if bossData[i][0] in neutrality_boss :
 						temp_bossTime1.append(bossData[i][0])
