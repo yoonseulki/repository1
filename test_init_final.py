@@ -48,6 +48,22 @@ channel_voice_name = []
 channel_voice_id = []
 channel_type = []
 
+neutrality_boss = []
+neutrality_boss.append("기감")
+neutrality_boss.append("웜")
+neutrality_boss.append("빨샤")
+neutrality_boss.append("녹샤")
+neutrality_boss.append("개미")
+neutrality_boss.append("산적")
+neutrality_boss.append("자크")
+neutrality_boss.append("스피")
+neutrality_boss.append("가스트")
+neutrality_boss.append("아르")
+neutrality_boss.append("도펠")
+neutrality_boss.append("리칸트")
+neutrality_boss.append("바포")
+neutrality_boss.append("네크")
+
 client = discord.Client()
 
 access_token = os.environ["BOT_TOKEN"]			
@@ -1197,9 +1213,20 @@ async def on_message(msg):
 				if bossTimeString[i] == '99:99:99' :
 					temp_bossTime1.append(bossData[i][0])
 
+#-----------------------
+#			temp_bossTime2 = []
+#			if len(temp_bossTime1) != 0:
+#				for i in range(temp_bossTime1):
+#					if temp_bossTime1[i] in neutrality_boss :
+#						temp_bossTime2.append(temp_bossTime1[i])
+#				temp_bossTimeSTR1 = ','.join(map(str, temp_bossTime2))
+#				temp_bossTimeSTR1 = '```' + temp_bossTimeSTR1 + '```'
+#-----------------------
 			if len(temp_bossTime1) != 0:
 				temp_bossTimeSTR1 = ','.join(map(str, temp_bossTime1))
 				temp_bossTimeSTR1 = '```' + temp_bossTimeSTR1 + '```'
+#-----------------------
+
 			else:
 				temp_bossTimeSTR1 = '``` ```'
 				
