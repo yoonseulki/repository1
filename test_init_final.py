@@ -1227,7 +1227,7 @@ async def on_message(msg):
 
 			embed = discord.Embed(
 					title = "----- 중립보스 -----",
-					description= "\n  ```기감(1),웜(2/멍),빨샤(2/멍),녹샤(2/멍),개미(2/멍),\n산적(3),자크(3),스피(3),가스트(3/멍),\n아르(4),도펠(4/멍),바포(14:00~14:30),네크(매 홀수 정시)```",
+					description= "\n  ```기감(1),웜(2/멍),빨샤(2/멍),녹샤(2/멍),개미(2/멍),\n산적(3),자크(3),스피(3),가스트(3/멍),\n아르(4),도펠(4/멍),리칸트(8/멍),바포(14:00~14:30),네크(매 홀수 정시)```",
 					color=0x0000ff
 					)
 			embed.add_field(
@@ -1240,11 +1240,11 @@ async def on_message(msg):
 					value= temp_bossTimeSTR1,
 					inline = False
 					)
-			embed.add_field(
-					name="----- 고정보스 -----",
-					value = fixed_information,
-					inline = False
-					)
+			#embed.add_field(
+			#		name="----- 고정보스 -----",
+			#		value = fixed_information,
+			#		inline = False
+			#		)
 			await client.get_channel(channel).send(embed=embed, tts=False)
 			#await client.get_channel(channel).send("```\n" + fixed_information + "```")
 			#await client.get_channel(channel).send("```\n" + information  + "```")
