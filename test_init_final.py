@@ -1280,12 +1280,12 @@ async def on_message(msg):
 			#		value = fixed_information,
 			#		inline = False
 			#		)
-			if len(temp_bossTime2) != 0:
-				embed.add_field(
-						name="----- 미예약 라인보스 -----",
-						value= temp_bossTimeSTR2,
-						inline = False
-						)
+			#if len(temp_bossTime2) != 0:
+			#	embed.add_field(
+			#			name="----- 미예약 라인보스 -----",
+			#			value= temp_bossTimeSTR2,
+			#			inline = False
+			#			)
 
 
 			await client.get_channel(channel).send(embed=embed, tts=False)
