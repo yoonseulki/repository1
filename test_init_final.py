@@ -320,7 +320,7 @@ async def my_background_task():
 							color=0x00ff00
 							)
 					await client.get_channel(channel).send(embed=embed, tts=False)
-					await PlaySound(voice_client1, './sound/' + fixed_bossData[i][0] + '젠.mp3')
+					# sulki await PlaySound(voice_client1, './sound/' + fixed_bossData[i][0] + '젠.mp3')
 				
 			for i in range(bossNum):
 				if bossTime[i] <= priv0 and bossTime[i] > priv:
@@ -328,14 +328,14 @@ async def my_background_task():
 						if bossFlag0[i] == False:
 							bossFlag0[i] = True
 							await client.get_channel(channel).send("```" + bossData[i][0] + ' ' + basicSetting[3] + '분 전 ' + bossData[i][3] + "```", tts=False)
-							await PlaySound(voice_client1, './sound/' + bossData[i][0] + '알림1.mp3')
+							# sulki await PlaySound(voice_client1, './sound/' + bossData[i][0] + '알림1.mp3')
 				
 				if bossTime[i] <= priv and bossTime[i] > now:
 					if basicSetting[1] != '0' :
 						if bossFlag[i] == False:
 							bossFlag[i] = True
 							await client.get_channel(channel).send("```" + bossData[i][0] + ' ' + basicSetting[1] + '분 전 ' + bossData[i][3] + "```", tts=False)
-							await PlaySound(voice_client1, './sound/' + bossData[i][0] + '알림.mp3')
+							# sulki await PlaySound(voice_client1, './sound/' + bossData[i][0] + '알림.mp3')
 						
 				if bossTime[i] <= now :
 					#print ('if ', bossTime[i])
@@ -351,14 +351,14 @@ async def my_background_task():
 							color=0x00ff00
 							)
 					await client.get_channel(channel).send(embed=embed, tts=False)
-					await PlaySound(voice_client1, './sound/' + bossData[i][0] + '젠.mp3')
+					# sulki await PlaySound(voice_client1, './sound/' + bossData[i][0] + '젠.mp3')
 				
 				if bossMungFlag[i] == True:
 					if (bossTime[i]+datetime.timedelta(days=-365)) <= aftr:
 						if basicSetting[2] != '0':
 							if bossData[i][2] == '0':
 								await client.get_channel(channel).send("```" +  bossData[i][0] + ' 미입력 됐습니다.```', tts=False)
-								await PlaySound(voice_client1, './sound/' + bossData[i][0] + '미입력.mp3')
+								# sulki await PlaySound(voice_client1, './sound/' + bossData[i][0] + '미입력.mp3')
 								bossFlag[i] = False
 								bossFlag0[i] = False
 								bossMungFlag[i] = False
@@ -374,7 +374,7 @@ async def my_background_task():
 								await dbSave()
 							else :
 								await client.get_channel(channel).send("```" + bossData[i][0] + ' 멍 입니다.```')
-								await PlaySound(voice_client1, './sound/' + bossData[i][0] + '멍.mp3')
+								# sulki await PlaySound(voice_client1, './sound/' + bossData[i][0] + '멍.mp3')
 								bossFlag[i] = False
 								bossFlag0[i] = False
 								bossMungFlag[i] = False
@@ -513,11 +513,11 @@ async def JointheVC(VCchannel, TXchannel):
 				await voice_client1.disconnect()
 				voice_client1 = await VCchannel.connect()
 			chkvoicechannel = 1
-			await PlaySound(voice_client1, './sound/hello.mp3')
+			# sulki await PlaySound(voice_client1, './sound/hello.mp3')
 		else :
 			await voice_client1.disconnect()
 			voice_client1 = await VCchannel.connect()
-			await PlaySound(voice_client1, './sound/hello.mp3')
+			# sulki await PlaySound(voice_client1, './sound/hello.mp3')
 		task1 = client.loop.create_task(my_background_task())
 	else:
 		await TXchannel.send('음성채널에 먼저 들어가주세요.', tts=False)
@@ -565,7 +565,7 @@ async def on_ready():
 	
 	if basicSetting[6] != "" and basicSetting[7] != "" :
 		#print ('join channel')
-		await JointheVC(client.get_channel(basicSetting[6]), client.get_channel(basicSetting[7]))
+		# sulki await JointheVC(client.get_channel(basicSetting[6]), client.get_channel(basicSetting[7]))
 		await client.get_channel(basicSetting[7]).send('< 텍스트채널 [' + client.get_channel(basicSetting[7]).name + '] 접속완료>', tts=False)
 		await client.get_channel(basicSetting[7]).send('< 음성채널 [' + client.get_channel(basicSetting[6]).name + '] 접속완료>', tts=False)
 		await client.get_channel(basicSetting[7]).send('< 보탐봇 재시작 설정시간 ' + basicSetting[4] + '시 ' + basicSetting[5] + '분입니다. >', tts=False)
@@ -652,7 +652,7 @@ async def on_message(msg):
 			
 		if basicSetting[6] != "":
 			#print ('join channel')
-			await JointheVC(client.get_channel(basicSetting[6]), channel)
+			# sulki await JointheVC(client.get_channel(basicSetting[6]), channel)
 			await client.get_channel(channel).send('< 음성채널 [' + client.get_channel(basicSetting[6]).name + '] 접속완료>', tts=False)
 		else:
 			#print ('join no')
@@ -972,7 +972,7 @@ async def on_message(msg):
 			sayMessage = tmp_sayMessage[3:]
 			await MakeSound(message.author.display_name +'님이.' + sayMessage, './sound/say')
 			await client.get_channel(channel).send("```< " + msg.author.display_name + " >님이 \"" + sayMessage + "\"```", tts=False)
-			await PlaySound(voice_client1, './sound/say.mp3')
+			# sulki await PlaySound(voice_client1, './sound/say.mp3')
 
 		##################################
 
@@ -1034,7 +1034,7 @@ async def on_message(msg):
 				task1.cancel()
 				print ('task cancle')
 
-			await JointheVC(voice_channel, channel)
+			# sulki await JointheVC(voice_channel, channel)
 			await client.get_channel(channel).send('< 음성채널 [' + client.get_channel(voice_channel.id).name + '] 접속완료>', tts=False)
 		
 		##################################
