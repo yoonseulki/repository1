@@ -54,7 +54,7 @@ neutrality_boss.append("웜")
 neutrality_boss.append("빨샤")
 neutrality_boss.append("녹샤")
 neutrality_boss.append("개미")
-neutrality_boss.append("산적")
+neutrality_boss.append("산두")
 neutrality_boss.append("자크")
 neutrality_boss.append("스피")
 neutrality_boss.append("가스트")
@@ -1262,7 +1262,7 @@ async def on_message(msg):
 
 			embed = discord.Embed(
 					title = "----- 중립보스 -----",
-					description= "\n  ```기감(1),웜(2/멍),빨샤(2/멍),녹샤(2/멍),개미(2/멍),\n산적(3),자크(3),스피(3),가스트(3/멍),\n아르(4),도펠(4/멍),리칸트(8/멍),바포(14:00~14:30/20:00~20:30),네크(매 홀수 정시)```",
+					description= "\n  ```기감(1),웜(2/멍),빨샤(2/멍),녹샤(2/멍),개미(2/멍),\n산두(3),자크(3),스피(3),가스트(3/멍),\n아르(4),도펠(4/멍),리칸트(8/멍),바포(14:00~14:30/20:00~20:30),네크(매 홀수 정시)```",
 					color=0x0000ff
 					)
 			embed.add_field(
@@ -1311,7 +1311,7 @@ async def on_message(msg):
 					description= ' ')
 			embed.add_field(name='1시간', value='기감', inline=False)
 			embed.add_field(name='2시간', value='서드,북드,카파,빨샤(멍),녹샤(멍),이프(멍),웜(멍),개미(멍)', inline=False)
-			embed.add_field(name='3시간', value='중드,동드,산적,자크,스피,거드(멍),마요(멍),가스트(멍),대흑,베리스/대장로(멍),케레(멍)', inline=False)
+			embed.add_field(name='3시간', value='중드,동드,산두,자크,스피,거드(멍),마요(멍),가스트(멍),대흑,베리스/대장로(멍),케레(멍)', inline=False)
 			embed.add_field(name='4시간', value='아르,도펠(멍)', inline=False)
 			embed.add_field(name='5시간', value='에자(멍)', inline=False)
 			embed.add_field(name='6시간', value='감데', inline=False)
