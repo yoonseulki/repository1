@@ -212,8 +212,10 @@ def init():
 	basicSetting.append(inputData[9][16:])     #basicSetting[3] : before_alert1
 	basicSetting.append(inputData[13][14:16])  #basicSetting[4] : restarttime 시
 	basicSetting.append(inputData[13][17:])    #basicSetting[5] : restarttime 분
-	basicSetting.append(inputData[1][15:])     #basicSetting[6] : voice채널 ID
-	basicSetting.append(inputData[2][14:])     #basicSetting[7] : text채널 ID
+	#basicSetting.append(inputData[1][15:])     #basicSetting[6] : voice채널 ID
+	#basicSetting.append(inputData[2][14:])     #basicSetting[7] : text채널 ID
+	basicSetting.append('749492283396849705')
+	basicSetting.append('749487302446678117')
 	basicSetting.append(inputData[3][16:])     #basicSetting[8] : 사다리 채널 ID
 	basicSetting.append(inputData[12][14:])    #basicSetting[9] : !ㅂ 출력 수
 	basicSetting.append(inputData[16][11:])    #basicSetting[10] : json 파일명
